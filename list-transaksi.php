@@ -28,6 +28,11 @@ if (!isset($_SESSION["user"])) {
         </div>
         <div class="p-4">
 		  		<h1><a href="home.php" class="logo">L A U N D R Y - !!</a></h1>
+          <h1 style="background-color:rgb(60, 60, 60);">
+				  <div>
+					  <img style="width:100%" src="source.gif">
+					</div>
+				</h1>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
 	            <a href="home.php"><span class="fa fa-home mr-3"></span> Home</a>
@@ -70,16 +75,28 @@ if (!isset($_SESSION["user"])) {
 
         <div id="content" class="p-4 p-md-5 pt-5">
     <body>
-    <h3>Tampil Transaksi</h3> <a href="form-member.php" class="btn btn-warning">Tambah Member</a>
+    <h3 class="text-white">Tampil Transaksi</h3> <a href="form-member.php" class="btn btn-warning">Tambah Member</a>
         <table class="table table-hover text-white table-striped">
         <thead> 
-            <tr>
-            <th class="text-info">NAMA<th class="text-info">ALAMAT</th>
-            <th class="text-info">JENIS KELAMIN</th><th class="text-info">NO TELEPON</th>
+          <tr>
+            <th class="text-info">KODE TRANSAKSI</th> 
+            <th class="text-info">MEMBER</th>
+            <th class="text-info">USER</th>
+            <th class="text-info">TANGGAL TRANSAKSI</th>
+            <th class="text-info">TANGGAL BAYAR</th>
+            <th class="text-info">PENGAMBILAN</th>
+            <th class="text-info">STATUS</th>
+            <th class="text-info">DIBAYAR</th>
             <th class="text-info">AKSI</th>
-            </tr>
+          </tr>
 
-            <div class="card-body">
+          <!-- kotak pencarian data pelanggan -->
+          <form action="list-transaksi.php" method="get">
+                    <input type="text" name="search"
+                    class="form-control mb-3 bg-dark text-info"
+                    placeholder="Cari apa hayooo..."
+                    required>
+
                 <ul class="list-group">
                     <?php
                     include "connection.php";
@@ -95,18 +112,6 @@ if (!isset($_SESSION["user"])) {
                     $hasil = mysqli_query($connect, $sql);
                     while ($transaksi = mysqli_fetch_array($hasil)) {
                         ?>
-                        <thead> 
-                                <tr>
-                                    <th class="text-info">KODE TRANSAKSI</th> 
-                                    <th class="text-info">MEMBER</th>
-                                    <th class="text-info">USER</th>
-                                    <th class="text-info">TANGGAL TRANSAKSI</th>
-                                    <th class="text-info">"TANGGAL BAYAR</th>
-                                    <th class="text-info">PENGAMBILAN</th>
-                                    <th class="text-info">STATUS</th>
-                                    <th class="text-info">DIBAYAR</th>
-                                    <th class="text-info">AKSI</th>
-                                </tr>
                                 
                                 <tr>
                                     <td><?=$transaksi['id_transaksi']?></td>
@@ -120,11 +125,11 @@ if (!isset($_SESSION["user"])) {
                                     
                                     <!-- bagian tombol pilihan-->
                                     <td><a href="form-transaksi.php?id_transaksi=<?=$transaksi['id_transaksi']?>" 
-                class="btn btn-success">U</a> | <a href="process-transaksi.php?id_transaksi=<?=$transaksi['id_transaksi']?>" 
+                class="btn btn-outline-warning">Edit</a> | <a href="process-transaksi.php?id_transaksi=<?=$transaksi['id_transaksi']?>" 
                 onclick="return confirm('Apakah anda yakin menghapus data ini?')" 
-                class="btn btn-danger">X</a> | <a href="bayar.php?id_transaksi=<?=$transaksi['id_transaksi']?>" 
+                class="btn btn-outline-danger">Delete</a> | <a href="bayar.php?id_transaksi=<?=$transaksi['id_transaksi']?>" 
                 onclick="return confirm('Apakah anda yakin membayar data ini?')" 
-                class="btn btn-primary">B</a> </td>
+                class="btn btn-outline-primary">Pay</a> </td>
                                 </tr>
                     </thead>
                                     
@@ -132,9 +137,9 @@ if (!isset($_SESSION["user"])) {
                                 }
                                 ?>
                         </li>
-                       
+                    </table>
                 </ul>
-                <a href="tambah_transaksi.php" class="btn btn-warning">Tambah Data</a>
+                <a href="form-transaksi.php" class="btn btn-warning">Tambah Data</a>
         <a class="btn btn-warning" href="#" onclick="window.print();" role = "button">Cetak Laporan</a>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
       </div>
@@ -144,5 +149,6 @@ if (!isset($_SESSION["user"])) {
     <script src="header/js/popper.js"></script>
     <script src="header/js/bootstrap.min.js"></script>
     <script src="header/js/main.js"></script>
+    
   </body>
 </html>

@@ -22,6 +22,11 @@
         </div>
 				<div class="p-4">
 		  		<h1><a href="home.php" class="logo"> L A U N D R Y - !!</a></h1>
+          <h1 style="background-color:rgb(60, 60, 60);">
+				  <div>
+					  <img style="width:100%" src="source.gif">
+					</div>
+				</h1>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
 	            <a href="home.php"><span class="fa fa-home mr-3"></span> Home</a>
@@ -66,14 +71,17 @@
         <!-- Page Content  -->
       <div id="content" class="bg-dark p-4 p-md-5 pt-5">
     <body>
-        <h3 class="text-white text-center bg-info">Tampil Paket</h3><a href="form-paket.php" class="btn btn-outline-success"> Tambah Paket</a>
+        <h3 class="text-white">Tampil Paket</h3><a href="form-paket.php" class="btn btn-outline-success"> Tambah Paket</a>
         <table class="table text-white table-hover table-striped">
             <thead>
                 <tr>
-                    <th>JENIS PAKET<th>HARGA</th>
-                    <th>AKSI</th>
+                    <th class="text-info">JENIS PAKET<th class="text-info">HARGA</th>
+                    <th class="text-info">AKSI</th>
                 </tr>
             </thead>
+
+           
+
             <tbody>
                 <?php
                 include "connection.php";

@@ -9,28 +9,29 @@
     <!-- <link rel="stylesheet" href="../anggota/style.css"> -->
     
 </head>
-<body>
-<div id="content" class="bg-dark p-4 p-md-5 pt-5">
+<body>s
     <div class="container bg-dark" style= margin-top:150px;>
-        <div class="card bg-dark col-lg-6 mx-auto">
+            <body class="bg-dark">
+    <div class="container">
+        <div class="card text-white bg-info col-lg-6 mx-auto">
             <div class="card-header bg-info">
-                <h3 class="text-white text-center">Welcome ! </h3>
+                <h4 class="text-white text-center">WELCOME !</h4>
             </div>
-            <div class="card-body text-white bg-dark">
-                <form action="login-proses.php" method="POST">
-                    <b>Username</b>
-                    <input type="text" name="username" class="form-control mb-2"
-                    placeholder="Username" required>
-                    <b>Password</b>
-                    <input type="password" name="password" class="form-control mb-2"
-                    placeholder="Password" required>
-                    
-                    <div class="card-footer">
-                        <button type="submit" name="login" class="btn btn-block btn-outline-success form-control">Login</button>
-                    </div>
+            <div class="card-body">
+                <form action="login-proses.php" method="post">
+                    Username
+                    <input type="text" name="username"
+                    class="form-control mb-2" required>
+                    Password
+                    <input type="password" name="password"
+                    class="form-control mb-2" required>
+                    <button type="submit" name="login"
+                    class="btn btn-outline-success btn-block">
+                        Login
+                    </button>
                 </form>
             </div>
         </div>
     </div>
 </body>
-</html>
+</html

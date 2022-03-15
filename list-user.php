@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Transaksi</title>
+  	<title>User</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -64,7 +64,7 @@
 
         <!-- Page Content  -->
       <div id="content" class="bg-dark p-4 p-md-5 pt-5">
-        <h3 class="text-white text-center bg-info">Tampil User</h3> <a href="form-user.php" class="btn btn-outline-success"> Tambah User</a>
+        <h3 class="text-white">Tampil User</h3> <a href="form-user.php" class="btn btn-outline-success"> Tambah User</a>
         <table class="table table-hover text-white table-striped">
             <thead>
                 <tr>

@@ -24,7 +24,7 @@ if (mysqli_query($connect, $sql)) {
         $id_paket = $paket;
         print_r($id_paket);
         
-        $sql = "insert into detail_transaksi values
+        $sql = "insert into detil_transaksi values
         (' ','$id_transaksi','$id_paket','$qty')";
         if (mysqli_query($connect, $sql)) {
             # jika berhasil insert ke tabel detail_pinjam

@@ -29,6 +29,11 @@ if (!isset($_SESSION["user"])) {
         </div>
         <div class="p-4">
 		  		<h1><a href="home.php" class="logo">L A U N D R Y - !!</a></h1>
+                  <h1 style="background-color:rgb(60, 60, 60);">
+				  <div>
+					  <img style="width:100%" src="source.gif">
+					</div>
+				</h1>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
 	            <a href="home.php"><span class="fa fa-home mr-3"></span> Home</a>
@@ -69,7 +74,10 @@ if (!isset($_SESSION["user"])) {
 	      </div>
     	</nav>
 
+        
             <div class="card-body">
+                <h3 class="text-white ">Form Member</h3>
+
                 <?php
                 if (isset($_GET["id_member"])) {
                     // memeriksa ketika load file ini

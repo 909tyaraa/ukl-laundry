@@ -6,7 +6,7 @@ include("connection.php");
 if (isset($_POST["login"])) {
     # menampung data username dan password
     $username = $_POST["username"];
-    $password = sha1($_POST["password"]);
+    $password = md5($_POST["password"]);
 
     # ambil data karyawan sesuai password dan username
     $sql = "select * from user where
@@ -21,11 +21,11 @@ if (isset($_POST["login"])) {
         # data disimpan ke dalam session
         $user = mysqli_fetch_array($hasil);
         $_SESSION["user"] = $user;
-        echo "<script>alert('Login Berhasil, Selamat Datang!');window.location='home.php'</script>";
-        
-    }else{
+        header("location:home.php");
+    } else {
         # login gagal
-        echo "<script>alert('Login gagal!');history.go(-1);</script>";
+         echo "<script>alert('login anda gagal');window.location='login.php'</script>";
+         // header("location:login.php");
     }
 }
 ?>

@@ -22,6 +22,11 @@
         </div>
         <div class="p-4">
 		  		<h1><a href="home.php" class="logo">L A U N D R Y - !!</a></h1>
+                  <h1 style="background-color:rgb(60, 60, 60);">
+				  <div>
+					  <img style="width:100%" src="source.gif">
+					</div>
+				</h1>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
 	            <a href="home.php"><span class="fa fa-home mr-3"></span> Home</a>
@@ -70,7 +75,7 @@
                 </h4>
             </div>
 
-            <div class="card-body bg-dark text-white">
+            <div class="card-body bg-dark text-info">
             <?php
                 if (isset($_GET["id_paket"])) {
                     $id_paket = $_GET["id_paket"];
