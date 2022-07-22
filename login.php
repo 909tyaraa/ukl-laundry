@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="header/css/style.css">
     <!-- <link rel="stylesheet" href="../anggota/style.css"> -->
     
 </head>
-<body>s
+<body>
     <div class="container bg-dark" style= margin-top:150px;>
             <body class="bg-dark">
     <div class="container">
@@ -26,7 +30,7 @@
                     <input type="password" name="password"
                     class="form-control mb-2" required>
                     <button type="submit" name="login"
-                    class="btn btn-outline-success btn-block">
+                    class="btn btn-success btn-block">
                         Login
                     </button>
                 </form>

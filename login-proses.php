@@ -3,7 +3,9 @@ session_start(); //ini harus ada pada baris pertama
 # session -> tempat penyimpanan data di sisi server
 # yang dapat diakses secara global pada halaman web yang membutuhkan
 include("connection.php");
-if (isset($_POST["login"])) {
+include "navbar.php";
+if (isset($_POST["login"])){
+    
     # menampung data username dan password
     $username = $_POST["username"];
     $password = md5($_POST["password"]);

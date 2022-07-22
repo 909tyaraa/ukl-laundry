@@ -59,4 +59,15 @@ if (isset($_POST["edit_status"])) {
         echo mysqli_error($connect);
     }
 }
+elseif (isset($_GET["id_transaksi"])) {
+    $id_transaksi = $_GET["id_transaksi"];
+    
+    # hapus data yg ada di tabel buku
+    $sql = "delete from transaksi where id_transaksi='$id_transaksi'";
+    if (mysqli_query($connect, $sql)) {
+        header("location:list-transaksi.php");
+    } else {
+        echo mysqli_error($connect);
+    }
+}
 ?>
